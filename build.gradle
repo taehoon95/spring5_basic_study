@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility= 1.8 
+
+
+tasks.withType(JavaCompile) {
+   options.encoding= 'UTF-8'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+// spring
+	implementation group: 'org.springframework', name: 'spring-context', version: '5.2.14.RELEASE'
+
+    testImplementation 'junit:junit:4.13'
+}

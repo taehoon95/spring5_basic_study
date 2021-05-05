@@ -1,7 +1,10 @@
 package spring5_basic_study.di;
 
-public class ChangePasswordService {
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class ChangePasswordService {
+	
+	@Autowired 
 	private MemberDao memberDao;
 	
 	public void changePassword(String email, String oldPwd, String newPwd) {
@@ -15,8 +18,8 @@ public class ChangePasswordService {
 		memberDao.update(member);
 	}
 
-	public void setMemberDao(MemberDao memberDao) {
-		this.memberDao = memberDao;
-	}
+//	public void setMemberDao(MemberDao memberDao) {
+//		this.memberDao = memberDao;
+//	}
 	
 }
